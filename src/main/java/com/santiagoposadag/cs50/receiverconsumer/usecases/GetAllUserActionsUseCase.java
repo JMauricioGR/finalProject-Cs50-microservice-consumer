@@ -21,7 +21,7 @@ public class GetAllUserActionsUseCase implements Function<String, Flux<UserDto>>
     }
 
     @Override
-    public Flux<UserDto> apply(String s) {
+    public Flux<UserDto> apply(String id) {
         return userActionRepository.findAll().map(mapper.fromUserToUserDto());
     }
 }
